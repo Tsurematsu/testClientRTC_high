@@ -16,6 +16,7 @@ async function main() {
         await agregarMediaAlPeerConnection(peerClient, 'video');
       },
       onClosedClient:liberarStreams,
+      leaveAction:false,
     });
     await peerConector.start();
     getButton.addEventListener('click', async () => {console.log('connections ->', connections);});
